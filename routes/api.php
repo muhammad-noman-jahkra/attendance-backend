@@ -17,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post('/upload-csv', 'App\Http\Controllers\AttendanceController@uploadCSV');
+Route::post('/emp-att-record', 'App\Http\Controllers\AttendanceController@empAttendance');
